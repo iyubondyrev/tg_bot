@@ -8,7 +8,9 @@ bot = telebot.TeleBot(MY_TOKEN)
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-    bot.reply_to(message, "Hi, i'm very stupid bot!\nI can only send dudes\nWrite me anything and i'll show you")
+    bot.reply_to(message, "Hi, i'm very stupid bot!\n"
+                          "I can only send dudes\n"
+                          "Write me anything and i'll show you")
 
 
 @bot.message_handler(func=lambda message: True)
