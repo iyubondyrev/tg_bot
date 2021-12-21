@@ -32,4 +32,4 @@ jobs:
       - name: Check out source repository
         uses: actions/checkout@v2
       - name: build image
-        uses: docker/build-action@v1
+        run: docker build -t tg_bot .
