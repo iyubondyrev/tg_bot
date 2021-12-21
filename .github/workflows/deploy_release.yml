@@ -12,7 +12,11 @@ on:
   workflow_dispatch:
 
 jobs:
+  sanity_check:
+    uses: iyubondyrev/tg_bot/.github/workflows/sanity_check.yml@main
+
   push_to_registry:
+    needs: [sanity_check]
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
