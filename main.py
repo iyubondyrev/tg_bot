@@ -1,5 +1,6 @@
 import telebot
 import os
+import random
 
 MY_TOKEN = os.getenv("BOT_API_TOKEN")
 bot = telebot.TeleBot(MY_TOKEN)
@@ -7,12 +8,15 @@ bot = telebot.TeleBot(MY_TOKEN)
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-    bot.reply_to(message, "Howdy, how are you doing?")
+    bot.reply_to(message, "Hi, i'm very stupid bot!\nI can only send dudes\nWrite me anything and i'll show you")
 
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-    bot.reply_to(message, message.text)
+    files = os.walk("dudes_storage/").__next__()[2]
+    file_name = random.choice(files)
+    dude = open("dudes_storage/" + file_name, 'rb')
+    bot.send_photo(message.chat.id, dude)
 
 
 bot.infinity_polling()
