@@ -18,7 +18,7 @@ def echo_all(message):
     files = os.walk("dudes_storage/").__next__()[2]
     file_name = random.choice(files)
     dude = open("dudes_storage/" + file_name, 'rb')
-    bot.send_photo(message.chat.id, dude, caption="Dude for you!")
+    bot.send_photo(message.chat.id, dude, caption="Dude for you ;)")
 
 
 bot.infinity_polling()
