@@ -1,6 +1,6 @@
 # tg_bot
 1. Ivan Bondyrev
-2. This is very stupid bot [бот](https://t.me/send_dudes_bot), which send dudes
+2. This is very stupid [bot](https://t.me/send_dudes_bot), which send dudes
 3. Using Amazon
 4. Using WatchTower
 ```
