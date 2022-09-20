@@ -1,8 +1,8 @@
 # tg_bot
-1. Бондырев Иван Юрьевич
-2. Это очень глупый [бот](https://t.me/send_dudes_bot), который шлет чуваков
-3. Amazon
-4. Реализовал с помощью watchtower, вот скрипт:
+1. Ivan Bondyrev
+2. This is very stupid bot [бот](https://t.me/send_dudes_bot), which send dudes
+3. Using Amazon
+4. Using WatchTower
 ```
 version: '3'
 
